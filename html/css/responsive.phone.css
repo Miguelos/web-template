@@ -1,0 +1,86 @@
+/* Tamaño pequeño, movil */
+
+@media only screen and (max-width: 660px) {
+	div.body-container{
+		width: 100%;
+	}
+
+	div.button-nav-menu{
+		display: block inline;
+		color: #111111;
+	    font-size: 14px;
+	    float: right;
+	    vertical-align: center;
+	    position: relative;
+	    margin: 0.5em;
+	    z-index: 7;
+	}
+
+	div.header-container{
+		width: 100%;
+		position: fixed;
+		top:0;
+
+	}
+
+	div.header-container h1{
+		padding: 1em;
+		height: 100%;
+	}
+	
+	div.header-container nav{
+	    width:100%;
+		text-align:left;
+		display:block;
+		height: auto;
+		transition: height 1s;
+		-moz-transition: height 1s; /* Firefox 4 */
+		-webkit-transition: height 1s; /* Safari and Chrome */
+		-o-transition: height 1s; /* Opera */
+	}
+
+	div.header-container nav.oculto{
+		display:none; /* menú oculto*/
+		height: 0; /* menú colapsado*/
+	}
+
+	div.header-container nav ul{
+	    margin-top:25px; /* Dejar espacio a la cabecera encima */
+	    margin-right:0.1em;
+	    margin-left:0.1em;
+		margin-bottom:1px;
+	    padding: 0.1em;
+	    position:relative;
+	    width:auto;
+	}
+
+	div.header-container nav ul li {
+		border:none;
+		background:none;
+		margin-bottom:1px;
+		/* padding:0.3em 0.2em 0.3em 0.2em; */
+	}
+
+	div.header-container nav ul li a{
+		font-size:20px;
+		text-align: left;
+		padding:0.3em;
+	}
+
+	div.header-container nav  ul li a:hover{
+		background: rgba(6, 15, 6, 0.6);
+		border-left: 0.5em solid rgba(255, 255, 255, 0.5);
+	}
+
+	div.header-container nav ul li a.active{
+		border-left: 0.5em solid rgba(255, 255, 255, 0.5);
+	}
+
+	/***********************************************************************************/
+	/* pié */
+
+	div.footer-container{		
+		width: 100%; /*=body-container width*/
+	}
+	
+}

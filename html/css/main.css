@@ -1,0 +1,313 @@
+/***********************************************************************************/
+/* Elementos  y envoltorio principal*/
+
+body, p, div, h1, h2, h3, h4, h5, h6, table, tbody, tr, td, span, blockquote, a, abbr, address, cite, code, img, ul, ol, li, dl, dd, dt, form, label, fieldset, caption, input, textarea, button{
+	list-style: none outside none;
+	margin: 0;
+	outline: 0 none;
+	padding: 0;
+	text-decoration: none;
+}
+
+body{
+	background: none repeat scroll 0 0 #1C441C;
+	color: rgba(255,255,255,0.95);
+	font-family: 'Inconsolata', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Syncopate', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-shadow: 1px 1px 1px #000;
+}
+
+.subir{
+	bottom: 0.5em;
+	color: #FFF;
+	display: block;
+	font-weight: bold;
+	padding: 0.5em;
+	position: fixed;
+	right: 0.5em;
+	text-align: center;
+	text-decoration: none;
+	z-index: 9;
+	outline: 0 none;
+}
+
+/*container es un contenedor genérico*/
+.container:after {
+    clear: both;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+
+div.button-container{
+	background-color: #AAAAAA;
+    background-repeat: repeat-x;
+    border: 0 none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: hand;
+    padding: 0em;
+    text-align: center;
+    text-shadow: 0 0.2em 0.2em rgba(255, 255, 255, 0.15);
+    vertical-align: middle;
+}
+div.button-container:hover{
+    cursor: hand;
+	background-color: #616161;
+	color: white;
+    text-shadow: 0 0.2em 0.2em rgba(255, 255, 255, 0.85);
+}
+div.button-container a{
+	width: 100%;
+	height: 100%;
+}
+
+div.body-container{
+	height: auto;
+	margin:0 auto;
+	position:relative;	
+	background: none repeat scroll 0 0 #1F4B1F;
+}
+
+.sombreado-negro, .sombreado-suave-blanco > *{
+	background: rgba(0, 0, 0, 0.8);	
+	color: #FFFFFF;
+	display: block;
+}
+.sombreado-blanco, .sombreado-suave-blanco > *{
+	background: rgba(255, 255, 255, 0.8);	
+	color: #000000;
+	display: block;
+}
+.sombreado-suave-negro, .sombreado-suave-blanco > *{
+	background: rgba(0, 0, 0, 0.5);	
+	color: #FFFFFF;
+	display: block;
+}
+.sombreado-suave-blanco, .sombreado-suave-blanco > *{
+	background: rgba(255, 255, 255, 0.5);	
+	color: #000000;
+	display: block;
+}
+
+
+div.centro{
+	margin: 0 auto;
+	position: relative;
+}
+div.izqda{
+	float: left;
+	position: relative;
+}
+div.dcha{
+	float: right;
+	position: relative;
+}
+
+div.marco{
+	position: relative;
+	display: table;
+	padding:0;
+	display: table;
+}
+
+div.galeria-container > *{
+	position: relative;
+}
+
+div.marco img{
+	background: rgba(255, 255, 255, 0.4);
+	padding: 1.5em;
+	margin: 0;
+	transition: all 300ms;
+	transition: background 500ms;
+}
+
+div.marco img:hover{
+	background: rgba(255, 255, 255, 0.8);
+}
+
+div.marco div.pie-foto{
+	display: none;
+	width: auto;
+	margin: 0em 2.6em 3em 2.6em;
+	padding: 0.3em;
+	float: right;
+	line-height: normal;
+	font-size: 11px;
+	font-style: italic;
+	text-align: center;
+	bottom: 0;
+	position: absolute;
+}
+
+div.marco:hover div.pie-foto{
+	display: block;
+}
+
+.grid3{
+	width: 33%;
+	float: left;
+	/* border: 0.1em solid rgba(255, 255, 255, 0.5); */
+	display: block;
+}
+
+.grid3 img.ancho-completo{
+	width: 100%; 
+	border: 0 none;
+    display: block;
+    height: auto;
+    width: 100%;
+    opacity: 0.5;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.grid3:hover img.ancho-completo{
+    opacity: 1;
+}
+
+.grid3 div.pie-foto{
+    transition: all 0.4s ease-in-out 0s;
+	width: 100%;
+	position: relative;
+}
+
+.grid3:hover div.pie-foto{
+	display: block;
+    height: auto;
+}
+
+.sombra-texto-verde {
+	text-shadow: 2px 2px 5px #1C441C;
+}
+
+.sombra-texto-blanca {
+	text-shadow: 2px 2px 5px #FFF;
+}
+
+.sombra-texto-negro {
+	text-shadow: 2px 2px 5px #000;
+}
+
+.page-title {
+	text-transform: uppercase;;
+}
+
+.ui-loader{
+	display: none;
+}
+
+/***********************************************************************************/
+/* cabecera */
+div.header-container{
+    background-image: url('../img/bgtelanegro.jpg');
+    background-repeat: repeat;	
+	font-family: 'Syncopate', sans-serif;
+	z-index: 1;
+}
+
+div.title-container{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+div.header-container h1.title{
+	font-size: larger; 
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+div.header-container nav{
+	color: white;
+	height:auto;
+}
+
+div.header-container ul{
+	list-style: none outside none;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+div.header-container nav ul li {
+	border:none;
+	background:none;v
+}
+
+div.header-container nav ul li a{
+	background: rgba(25, 25, 25, 0.6);
+	/* background: none repeat scroll 0 0 #252525; */
+	text-align: left;
+	display:block;
+	color: white;
+	text-decoration: none;
+}
+
+div.header-container nav ul li a:link, nav ul li a:visited, nav  ul li a:hover, nav ul li a.active {
+	color: white;
+	text-decoration:none;
+	transition:all 400ms;
+	-webkit-transition:all 400ms;
+	-moz-transition:all 400ms;
+	-o-transition:all 400ms;
+}
+
+div.header-container nav ul li a:link, nav ul li a:visited {
+}
+
+div.header-container nav  ul li a:hover{
+	background: rgba(6, 15, 6, 0.6);
+	/* background: none repeat scroll 0 0 #060F06; */
+}
+
+div.header-container nav  ul li a.active{
+	background: none repeat scroll 0 0 #235C23;	
+}
+
+/* page*/
+
+div.page{
+	margin-top: 5em;
+	margin-bottom: 5em;
+	margin-left: 1em;
+	margin-right: 1em;
+	display: block;
+}
+
+div.page-content{
+	display: block;
+	
+}
+
+.page-title-container {
+	padding: 1em;
+}
+
+
+
+/***********************************************************************************/
+/* contenido */
+
+div.main-container{
+	background: none repeat scroll 0 0 #235C23;
+}
+
+/***********************************************************************************/
+/* pie de página */
+
+div.footer-container{
+    background-image: url('../img/bgtelanegro.jpg');
+    background-repeat: repeat;	
+	height: auto;
+	z-index: 2;
+	text-align: left;
+}

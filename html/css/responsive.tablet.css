@@ -1,0 +1,97 @@
+/* Tamaño mediano, tablet */
+
+@media only screen and (min-width: 661px) and (max-width: 900px) {
+	
+	img{
+		max-width: 500px;
+		height: auto;
+	}
+
+	div.body-container{
+		width: 95%;		
+		min-width: 630px;
+		position: absolute;
+	}
+
+	/***********************************************************************************/
+	/* header */
+
+	div.header-container .button-nav-menu{
+		display: none;
+	}
+
+	div.header-container h1.title{
+		float: left;
+		padding: 0.1em 0.2em;
+		position: relative;
+	}
+
+	div.header-container{
+		width: 95%; /*=body-container width*/
+		min-width: 630px; /*=body-container min-width*/
+		margin: 0;
+		padding: 0; 
+		position: fixed;
+	}
+
+	div.header-container nav{
+	    width:auto;
+	    bottom:0;
+	    float:right;
+   		text-align:center;
+		position: relative;
+	}
+
+	div.header-container nav ul{
+  		margin: 0;
+  		padding: 0;
+	}
+
+	div.header-container nav ul li{
+		float: left;
+		display: inline;
+		position: relative;
+		padding: 0;
+	}
+
+	div.header-container nav ul li a{
+		padding:0.5em 0.2em 0.5em 0.2em;
+		border-radius: 0;
+    	font-size: smaller;
+    	bottom: 0;
+		border-top: 0.5em solid rgba(255, 255, 255, 0);
+	}
+
+	div.header-container nav  ul li a:hover{
+		background: rgba(6, 15, 6, 0.6);
+	}
+
+	div.header-container nav ul li a:hover{
+		border-top: 0.5em solid rgba(255, 255, 255, 0.5);		
+	} 
+	div.header-container nav ul li a.active{
+		border-top: 0.5em solid rgba(255, 255, 255, 0.5);
+	}
+		
+	/***********************************************************************************/
+	/* contenido */
+
+	div.main-container{
+		width: 99%; 
+		padding: 0.5%;
+		margin-top: 2.4em;
+		padding-top: 1em;
+		position: absolute;
+	}
+
+	/***********************************************************************************/
+	/* pié */
+
+	div.footer-container{		
+		width: 95%; /*=body-container width*/
+		min-width: 630px; /*=body-container min-width*/
+		bottom:0;
+		position: fixed;
+	}
+
+}
