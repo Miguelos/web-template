@@ -32,9 +32,7 @@ $(document).ready(function() {
 			.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
 			.replace(/\/$/,'');
   	}
-	var locationPath = filterPath(location.pathname);
-	var scrollElem = scrollableElement('html', 'body');
- 
+
 	function scrollableElement(els) {
 		for (var i = 0, argLength = arguments.length; i <argLength; i++) {
 			var el = arguments[i],
@@ -52,14 +50,28 @@ $(document).ready(function() {
 		}
 		return [];
 	}
-	
-	$('nav a[href*=#]').click( function(event) {
-		$.scrollTo(
-			$(this).attr("href"),{
-					duration: 200,
-					offset: { 'top':-0.15*$(window).height() }
-				}
-		);
+
+	var locationPath = filterPath(location.pathname);
+	var scrollElem = scrollableElement('html', 'body');
+ 
+	$('a[href*=#]').each(function() {
+		var thisPath = filterPath(this.pathname) || locationPath;
+		if (  locationPath == thisPath
+				&& (location.hostname == this.hostname || !this.hostname)
+				&& this.hash.replace(/#/,'') ) {
+			var $target = $(this.hash), target = this.hash;
+			if (target) {
+			var targetOffset = $target.offset().top;
+			$(this).click(function(event) {
+				event.preventDefault();
+				$('nav a.active').removeClass('active');
+				$(this).addClass('active');
+				$(scrollElem).animate({scrollTop: targetOffset}, 300, function() {
+					location.hash = target;
+				});
+			});
+		}
+		}
 	});
 
 	$(".page").waypoint({
@@ -72,7 +84,6 @@ $(document).ready(function() {
 
 			$('nav a').removeClass("active");
 			active_link.addClass("active");
-
 		},
 		offset: '25%'
 	})
