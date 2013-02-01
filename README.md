@@ -1,7 +1,9 @@
 web-template
 ============
 
-Simple web in one html with sections. 
+Static web template.
+
+One html with sections. 
 
 Feaures:
 * waypoints
